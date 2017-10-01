@@ -39,9 +39,7 @@
 ;; fallback to http there
 (if (eq system-type 'windows-nt)
     (add-to-list 'package-archives
-                 '("melpa" . "http://melpa.org/packages/") t)
-  (add-to-list 'package-archives
-               '("melpa" . "https://melpa.org/packages/") t))
+                 '("melpa" . "http://melpa.org/packages/") t))
 
 ;; load the pinned packages
 (let ((prelude-pinned-packages-file (expand-file-name "prelude-pinned-packages.el" prelude-dir)))
@@ -87,7 +85,17 @@
     undo-tree
     volatile-highlights
     which-key
+    multi-eshell
+    function-args
+    sr-speedbar
+    company
+    company-auctex 
+    company-c-headers
+    auctex-latexmk
+    latex-extra
+    org-journal
     zenburn-theme
+    grandshell-theme
     zop-to-char)
   "A list of packages to ensure are installed at launch.")
 

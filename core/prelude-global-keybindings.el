@@ -111,6 +111,29 @@
 (global-set-key (kbd "s-.") 'avy-goto-word-or-subword-1)
 (global-set-key (kbd "s-w") 'ace-window)
 
+;;Previous and next buffer
+(global-set-key (kbd "M-[") 'previous-buffer)
+(global-set-key (kbd "M-]") 'next-buffer)
+;;Undo command
+(global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "C-<tab>") 'other-window)
+
+;;Replace string remapping
+(global-set-key (kbd "<f2>") 'replace-string)
+(global-set-key (kbd "<f3>") 'query-replace)
+
+;;find file at point
+(global-set-key (kbd "C-x f") 'ffap)
+
+;;Mark whole sexp
+(global-set-key (kbd "C-c w") 'sp-copy-sexp)
+
+;; Comment marked region
+(global-set-key (kbd "C-x C-r") 'comment-region)
+
+;;Flyspell
+(global-set-key (kbd "M-#") 'flyspell-buffer)
+
 (provide 'prelude-global-keybindings)
 
 ;;; prelude-global-keybindings.el ends here
