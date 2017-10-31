@@ -432,8 +432,8 @@ and file 'filename' will be opened and cursor set on line 'linenumber'"
                             fn))) files)))
 
 ;; use settings from .editorconfig file when present
-(require 'editorconfig)
-(editorconfig-mode 1)
+;;(require 'editorconfig)
+;;(editorconfig-mode 1)
 
 (provide 'prelude-editor)
 

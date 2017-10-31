@@ -62,7 +62,7 @@
     diff-hl
     diminish
     easy-kill
-    editorconfig
+    ;;editorconfig
     epl
     expand-region
     flycheck
@@ -89,11 +89,12 @@
     function-args
     sr-speedbar
     company
-    company-auctex 
+    company-auctex
     company-c-headers
     auctex-latexmk
     latex-extra
     org-journal
+    ggtags
     zenburn-theme
     grandshell-theme
     zop-to-char)

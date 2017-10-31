@@ -38,12 +38,12 @@
   :prefix "prelude-"
   :group 'convenience)
 
-(defcustom prelude-auto-save t
+(defcustom prelude-auto-save nil
   "Non-nil values enable Prelude's auto save."
   :type 'boolean
   :group 'prelude)
 
-(defcustom prelude-guru t
+(defcustom prelude-guru nil
   "Non-nil values enable `guru-mode'."
   :type 'boolean
   :group 'prelude)
@@ -93,7 +93,7 @@ Only modes that don't derive from `prog-mode' should be listed here."
   :type 'number
   :group 'prelude)
 
-(defcustom prelude-theme 'zenburn
+(defcustom prelude-theme 'grandshell
   "The default color theme, change this in your /personal/preload config."
   :type 'symbol
   :group 'prelude)
