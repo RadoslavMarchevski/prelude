@@ -19,14 +19,14 @@
  helm-gtags-suggested-key-mapping t
  )
 
-(require 'helm-gtags)
-;; Enable helm-gtags-mode
-(add-hook 'dired-mode-hook 'helm-gtags-mode)
-(add-hook 'eshell-mode-hook 'helm-gtags-mode)
-(add-hook 'c-mode-hook 'helm-gtags-mode)
-(add-hook 'c++-mode-hook 'helm-gtags-mode)
-
-(global-set-key (kbd "C-c p s t") 'helm-gtags-mode)
+;;(require 'helm-gtags)
+;;;; Enable helm-gtags-mode
+;;(add-hook 'dired-mode-hook 'helm-gtags-mode)
+;;(add-hook 'eshell-mode-hook 'helm-gtags-mode)
+;;(add-hook 'c-mode-hook 'helm-gtags-mode)
+;;(add-hook 'c++-mode-hook 'helm-gtags-mode)
+;;
+;;(global-set-key (kbd "C-c p s t") 'helm-gtags-mode)
 ;;(custom-set-variables
 ;; '(helm-gtags-prefix-key "\C-t")
 ;; '(helm-gtags-suggested-key-mapping t))
@@ -36,22 +36,22 @@
 ;;                                    gt)))
 
 
-(eval-after-load "helm-gtags"
-  '(progn
-     (define-key helm-gtags-mode-map (kbd "C-c C-v g") 'helm-gtags-tags-in-this-function)
-     (define-key helm-gtags-mode-map (kbd "C-c C-v j") 'helm-gtags-select)
-     (define-key helm-gtags-mode-map (kbd "C-c C-v .") 'helm-gtags-dwim)
-     (define-key helm-gtags-mode-map (kbd "C-c C-v u") 'helm-gtags-update-tags)
-     (define-key helm-gtags-mode-map (kbd "C-c C-v ,") 'helm-gtags-pop-stack)
-     (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
-     (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
-     (define-key helm-gtags-mode-map (kbd "C-c C-v f") 'helm-gtags-find-tag)
-     (define-key helm-gtags-mode-map (kbd "C-c C-v r") 'helm-gtags-find-rtag)
-     (define-key helm-gtags-mode-map (kbd "C-c C-v s") 'helm-gtags-find-symbol)
-     (define-key helm-gtags-mode-map (kbd "C-c C-v p") 'helm-gtags-parse-file)
-     (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
-     (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)))
-
+;;(eval-after-load "helm-gtags"
+;;  '(progn
+;;     (define-key helm-gtags-mode-map (kbd "C-c C-v g") 'helm-gtags-tags-in-this-function)
+;;     (define-key helm-gtags-mode-map (kbd "C-c C-v j") 'helm-gtags-select)
+;;     (define-key helm-gtags-mode-map (kbd "C-c C-v .") 'helm-gtags-dwim)
+;;     (define-key helm-gtags-mode-map (kbd "C-c C-v u") 'helm-gtags-update-tags)
+;;     (define-key helm-gtags-mode-map (kbd "C-c C-v ,") 'helm-gtags-pop-stack)
+;;     (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
+;;     (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
+;;     ;;(define-key helm-gtags-mode-map (kbd "C-c C-v f") 'helm-gtags-find-tag)
+;;     (define-key helm-gtags-mode-map (kbd "C-c C-v r") 'helm-gtags-find-rtag)
+;;     (define-key helm-gtags-mode-map (kbd "C-c C-v s") 'helm-gtags-find-symbol)
+;;     (define-key helm-gtags-mode-map (kbd "C-c C-v p") 'helm-gtags-parse-file)
+;;     (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
+;;     (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)))
+;;
 
 (require 'sr-speedbar)
 
@@ -199,3 +199,18 @@
              'th-evince-sync)))))
 
 (add-hook 'LaTeX-mode-hook 'enable-evince-sync)
+
+
+
+;; Enable company
+;;(require 'company-clang)
+;;(require 'company-c-headers)
+;;
+;;(add-hook 'after-init-hook 'global-company-mode)
+;;(add-to-list 'company-backends 'company-c-headers)
+
+
+
+;; Clipboard synchronization between emacs and tmux
+(setq x-select-enable-clipboard t
+      x-select-enable-primary t)

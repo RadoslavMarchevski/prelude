@@ -57,10 +57,10 @@
 
 ;; use helm to list eshell history
 (add-hook 'eshell-mode-hook
-          #'(lambda ()
+          '(lambda ()
               (substitute-key-definition 'eshell-list-history 'helm-eshell-history eshell-mode-map)))
 
-(substitute-key-definition 'find-tag 'helm-etags-select global-map)
+;;(substitute-key-definition 'find-tag 'helm-etags-select global-map)
 (setq projectile-completion-system 'helm)
 (helm-descbinds-mode)
 (helm-mode 1)
