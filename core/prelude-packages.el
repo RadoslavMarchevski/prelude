@@ -95,6 +95,13 @@
     latex-extra
     org-journal
     ggtags
+    rtags
+    helm-rtags
+    company-rtags
+    irony
+    company-irony
+    company-irony-c-headers
+    flycheck-rtags
     zenburn-theme
     grandshell-theme
     zop-to-char)
