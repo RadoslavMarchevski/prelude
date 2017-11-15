@@ -40,8 +40,12 @@
 (if (eq system-type 'windows-nt)
     (add-to-list 'package-archives
                  '("melpa" . "http://melpa.org/packages/") t))
-
+(add-to-list 'package-archives
+                 '("melpa" . "http://melpa.org/packages/") t)
 ;; load the pinned packages
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+
 (let ((prelude-pinned-packages-file (expand-file-name "prelude-pinned-packages.el" prelude-dir)))
   (if (file-exists-p prelude-pinned-packages-file)
       (load prelude-pinned-packages-file)))
@@ -97,6 +101,7 @@
     ggtags
     rtags
     helm-rtags
+    helm-gtags
     company-rtags
     irony
     company-irony
