@@ -41,15 +41,6 @@
      (prelude-require-packages '(company-auctex))
      (company-auctex-init)))
 
-(require 'predictive)
-(autoload 'predictive-mode "~/git/predictive" "predictive" t)
-(set-default 'predictive-auto-add-to-dict t)
-(setq predictive-main-dict 'rpg-dictionary
-      predictive-auto-learn t
-      predictive-add-to-dict-ask nil
-      predictive-use-auto-learn-cache nil
-      predictive-which-dict t)
-
 (defcustom prelude-latex-fast-math-entry 'LaTeX-math-mode
   "Method used for fast math symbol entry in LaTeX."
   :link '(function-link :tag "AUCTeX Math Mode" LaTeX-math-mode)
