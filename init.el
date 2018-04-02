@@ -28,7 +28,7 @@
 ;;
 ;; You should have received a copy of the GNU General Public License
 ;; along with GNU Emacs; see the file COPYING.  If not, write to the
-;; Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+;; Free Software Foundation, Inc., 51 Franklin Street Fifth Floor,
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Code:
@@ -88,6 +88,7 @@ by Prelude.")
 (add-to-list 'load-path prelude-core-dir)
 (add-to-list 'load-path prelude-modules-dir)
 (add-to-list 'load-path prelude-vendor-dir)
+(add-to-list 'load-path prelude-personal-dir)
 (prelude-add-subfolders-to-load-path prelude-vendor-dir)
 
 ;; reduce the frequency of garbage collection by making it happen on

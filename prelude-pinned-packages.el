@@ -20,7 +20,6 @@
         (coffee-mode . "melpa-stable")
         (company . "melpa-stable")
         (company-anaconda . "melpa-stable")
-        (company-auctex . "melpa-stable")
         (company-go . "melpa-stable")
         (crux . "melpa-stable")
         (cython-mode . "melpa-stable")

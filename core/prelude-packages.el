@@ -41,7 +41,7 @@
     (add-to-list 'package-archives
                  '("melpa" . "http://melpa.org/packages/") t))
 (add-to-list 'package-archives
-                 '("melpa" . "http://melpa.org/packages/") t)
+	     '("melpa" . "http://melpa.org/packages/") t)
 ;; load the pinned packages
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
@@ -89,7 +89,6 @@
     undo-tree
     volatile-highlights
     which-key
-    multi-eshell
     function-args
     sr-speedbar
     company

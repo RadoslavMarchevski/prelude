@@ -61,6 +61,7 @@
 (add-hook 'c++-mode-hook 'helm-gtags-mode)
 (add-hook 'asm-mode-hook 'helm-gtags-mode)
 
+
 (eval-after-load "helm-gtags"
   '(progn
      (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)

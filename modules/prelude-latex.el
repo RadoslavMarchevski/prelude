@@ -36,11 +36,19 @@
 (require 'smartparens-latex)
 ;; for case
 (require 'cl)
-
 (eval-after-load "company"
   '(progn
      (prelude-require-packages '(company-auctex))
      (company-auctex-init)))
+
+(require 'predictive)
+(autoload 'predictive-mode "~/git/predictive" "predictive" t)
+(set-default 'predictive-auto-add-to-dict t)
+(setq predictive-main-dict 'rpg-dictionary
+      predictive-auto-learn t
+      predictive-add-to-dict-ask nil
+      predictive-use-auto-learn-cache nil
+      predictive-which-dict t)
 
 (defcustom prelude-latex-fast-math-entry 'LaTeX-math-mode
   "Method used for fast math symbol entry in LaTeX."
@@ -87,6 +95,7 @@
 
 (add-hook 'LaTeX-mode-hook (lambda ()
                              (run-hooks 'prelude-latex-mode-hook)))
+(add-hook 'LaTeX-mode-hook 'flyspell-mode)
 
 (provide 'prelude-latex)
 
