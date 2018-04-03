@@ -37,12 +37,19 @@
 (add-hook 'after-init-hook 'global-company-mode)
 
 (setq company-idle-delay 0.5)
-(add-to-list 'company-backends 'company-math-symbols-unicode)
 (setq company-tooltip-limit 10)
 (setq company-minimum-prefix-length 2)
 ;; invert the navigation direction if the the completion popup-isearch-match
 ;; is displayed on top (happens near the bottom of windows)
 (setq company-tooltip-flip-when-above t)
+
+(add-to-list 'company-backends 'company-math-symbols-unicode)
+(defun my-latex-mode-setup ()
+(setq-local company-backends
+(append '((company-math-symbols-latex company-latex-commands))
+company-backends)))
+(add-hook 'LaTeX-mode-hook 'my-latex-mode-setup)
+
 
 ;;(global-company-mode 1)
 

@@ -68,13 +68,19 @@
      (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
      (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
      (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
-     (define-key helm-gtags-mode-map (kbd "C-j") 'helm-gtags-select)
-
+     (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
+     (define-key helm-gtags-mode-map (kbd "C-c d") nil)
+     (define-key helm-gtags-mode-map (kbd "C-j") nil)
      (define-key helm-gtags-mode-map (kbd "C-c C-v g") 'helm-gtags-tags-in-this-function)
      (define-key helm-gtags-mode-map (kbd "C-c C-v j") 'helm-gtags-select)
-     (define-key helm-gtags-mode-map (kbd "C-c C-v u") 'helm-gtags-update-tags)
+     (define-key helm-gtags-mode-map (kbd "C-c C-v u") 'helm-gtags-ugpdate-tags)
      (define-key helm-gtags-mode-map (kbd "C-c C-v f") 'helm-gtags-find-tag)
      (define-key helm-gtags-mode-map (kbd "C-c C-v r") 'helm-gtags-find-rtag)
      (define-key helm-gtags-mode-map (kbd "C-c C-v s") 'helm-gtags-find-symbol)
      (define-key helm-gtags-mode-map (kbd "C-c C-v p") 'helm-gtags-parse-file)
      ))
+;;;; remove keybinding
+;;(define-key minor-mode-map (kbd "C-c c") nil)
+;;
+;;;; change keybinding
+;;(define-key minor-mode-map (kbd "C-c c") (kbd "C-c C-c"))
