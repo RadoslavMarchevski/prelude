@@ -71,6 +71,7 @@
      (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
      (define-key helm-gtags-mode-map (kbd "C-c d") nil)
      (define-key helm-gtags-mode-map (kbd "C-j") nil)
+     (define-key helm-gtags-mode-map (kbd "C-t") nil)
      (define-key helm-gtags-mode-map (kbd "C-c C-v g") 'helm-gtags-tags-in-this-function)
      (define-key helm-gtags-mode-map (kbd "C-c C-v j") 'helm-gtags-select)
      (define-key helm-gtags-mode-map (kbd "C-c C-v u") 'helm-gtags-ugpdate-tags)
