@@ -56,6 +56,7 @@
 
 (defvar prelude-packages
   '(ace-window
+    elpy
     avy
     anzu
     beacon

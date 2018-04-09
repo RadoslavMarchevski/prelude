@@ -106,6 +106,8 @@
 (add-hook 'python-mode-hook (lambda ()
                               (run-hooks 'prelude-python-mode-hook)))
 
+(require 'elpy)
+(elpy-enable)
 (provide 'prelude-python)
 
 ;;; prelude-python.el ends here
